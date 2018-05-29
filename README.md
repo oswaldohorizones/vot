@@ -93,16 +93,33 @@ Hacer **find and replace in files** con un editor
 buscar la url:
 `https://search-havasmedia-h7o3s6bmcgvqv6ubgvkamqmiwa.us-west-2.es.amazonaws.com` y remplazar por: `localhost:9200`
 
+## Cambiar la url de S3 a otro bucket copia
+1. Crear un bucket copia
+2. Crear un identify pool id https://docs.aws.amazon.com/cognito/latest/developerguide/identity-pools.html
+3. Hacer **find and replace in files** con un editor
+buscar la url generada en paso 2:
+`us-west-2:97a951e7-b60c-4068-92e9-e6505f213116` y remplazar por: `nueva url`
+
 ## Instalar consola de angular
 ```
 npm install -g @angular/cli
 ```
 ## Instalar dependencias fronted
 ```
+cd HavasMediaFrontend
 npm install
 ```
 ## Ejecutar fronted
 ```
-cd HavasMediaFrontend
 ng serve
 ```
+
+## Información addicional
+puertos por servicio
+
+| servicio      | puerto |
+| ------------- | ---: |
+| Elasticsearch | 9200 |
+| PostgreSQL    | 5432 |
+| Sails (NodeJS)| 1337 |
+| Angular       | 4200 |
